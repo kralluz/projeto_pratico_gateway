@@ -8,6 +8,25 @@
 [![Fastify](https://img.shields.io/badge/Fastify-5.x-black.svg)]()
 [![Prisma](https://img.shields.io/badge/Prisma-6.x-2D3748.svg)]()
 
+---
+
+## 👥 **Equipe de Desenvolvimento**
+
+### 🎖️ **Responsáveis Técnicos**
+- **👨‍💻 Backend:** Carlos Henrique, Vitor Santos
+- **🎨 Frontend:** Vitor Santos, Felipe Gomes  
+- **⚙️ Infraestrutura:** Luiz Felipe
+
+### 📋 **Criadores do Projeto**
+| Nome | Responsabilidade Principal |
+|------|---------------------------|
+| **Carlos Henrique** | Backend Lead & Arquitetura |
+| **Vitor Santos** | Full-Stack (Backend/Frontend) |
+| **Felipe Gomes** | Frontend Development |
+| **Luiz Felipe** | DevOps & Infraestrutura |
+
+---
+
 ## 🎯 **Visão Geral**
 
 Este projeto implementa uma **arquitetura completa de microserviços** com 3 serviços independentes:
@@ -487,3 +506,150 @@ yarn dev
 - API Gateway: `GET http://localhost:3000/health`
 - Auth Service: `GET http://localhost:3001/auth/health`
 - App Service: `GET http://localhost:3002/app/health`
+
+---
+
+## 🎓 **Conceitos e Tecnologias Aplicadas**
+
+### 👨‍💻 **BACKEND** (Carlos Henrique e Vitor Santos)
+
+#### 🔷 **Fundamentos Intermediários**
+- **REST APIs** com Fastify
+- **Modularização** por domínio
+- **Middlewares** e lifecycle hooks
+- **JWT** (access + refresh tokens)
+- **Criptografia** de senhas com bcrypt
+- **Validação** com Zod
+- **Tipagem forte** com TypeScript
+
+#### 🔷 **Prisma ORM** (Avançado)
+- **Modelagem relacional** com Foreign Keys
+- **Migrations isoladas** por microserviço
+- **Integração** de múltiplos schemas no mesmo banco
+- **Seed, transactions** e soft delete
+- **Type safety** automático
+
+#### 🔷 **Arquitetura de Microserviços**
+- **Gateway de API** com reverse proxy
+- **Isolamento de responsabilidades** (auth/app)
+- **Autenticação distribuída**
+- **Serviços independentes** com CI/CD separado
+- **Comunicação inter-serviços**
+
+#### 🔷 **Testes e Segurança**
+- **Testes unitários** com Jest
+- **Testes de integração** via HTTP
+- **Rate limiting**, CORS, Helmet
+- **Tratamento global** de erros e logging
+- **Validação** de entrada robusta
+
+#### 🔷 **Documentação e Padronização**
+- **Swagger** com Fastify
+- **Enumeração** de códigos de erro
+- **DTOs** e interfaces compartilhadas
+- **Geração de tipos** via zod-to-openapi
+- **API-first development**
+
+### 🧑‍💻 **FRONTEND** (Vitor Santos e Felipe Gomes)
+
+#### 🔷 **Fundamentos Práticos**
+- **React** com Vite
+- **Roteamento** com react-router-dom
+- **Hooks**: useState, useEffect, useContext
+- **Consumo de APIs** REST com axios/fetch
+- **Gerenciamento de estado** moderno
+
+#### 🔷 **Fluxo de Autenticação**
+- **Login, registro** e logout
+- **Armazenamento** de token (localStorage)
+- **Redirecionamento condicional** com rotas privadas
+- **Proteção de rotas** baseada em auth
+
+#### 🔷 **UX e Navegação**
+- **Feedback** de erros de API
+- **Feedback** de carregamento (spinners, toasts)
+- **Formulários** com validação (React Hook Form + Zod)
+- **Interface responsiva** e acessível
+
+#### 🔷 **Organização e Arquitetura**
+- **Separação** por pastas: pages, components, services, context
+- **Reutilização** de componentes
+- **Design system** simples com estilização flexível
+- **Padrões** de desenvolvimento consistentes
+
+### 🧠 **INFRAESTRUTURA** (Carlos Henrique e Luiz Felipe)
+
+#### 🔷 **Provisionamento e Servidores**
+- **VPS local** com IP fixo
+- **Gerenciamento** com Docker e Docker Compose
+- **Infraestrutura como código** com Terraform
+- **Configuração automatizada** com Ansible
+- **Ambientes isolados** (dev/staging/prod)
+
+#### 🔷 **Deploy e Orquestração**
+- **GitHub Actions** para CI/CD
+- **Deploy remoto** via SSH + Terraform
+- **Tagging, rollback** e override para containers
+- **Gerenciamento** de múltiplos ambientes
+- **Kubernetes** (Minikube/K3s) para escalabilidade
+
+#### 🔷 **Observabilidade**
+- **Grafana** para dashboards visuais
+- **Prometheus** para métricas (Node Exporter, cAdvisor)
+- **Loki + Promtail** para logs centralizados
+- **Alertas automatizados** com Bot do Telegram
+- **Monitoramento proativo** de performance
+
+#### 🔷 **Segurança**
+- **Certificados SSL** com Let's Encrypt
+- **HTTPS** via Apache proxy reverso
+- **Firewall** com iptables
+- **Proteção** contra brute-force com Fail2Ban
+- **Gerenciamento** de segredos via .env e GitHub Secrets
+
+#### 🔷 **Backup e Resiliência**
+- **Backup** de banco com pg_dump + agendamento via cron
+- **Backup** de volumes com Duplicati
+- **Política** de retenção e testes mensais de restauração
+- **Scripts** de recovery completos
+- **Disaster recovery** planejado
+
+---
+
+## 📚 **Documentação Adicional**
+
+- [📖 **Arquitetura Técnica**](./TECHNICAL_ARCHITECTURE.md) - Detalhes técnicos aprofundados
+- [🏗️ **Visão Arquitetural**](./ARCHITECTURE.md) - Visão geral da arquitetura
+- [🧪 **Guia de Testes**](./TESTING_GUIDE.md) - Como expandir testes gradativamente
+- [📝 **Exemplos de Teste**](./TEST_EXAMPLES.md) - Templates para novos testes
+- [📊 **Resumo Executivo**](./PROJECT_SUMMARY.md) - Overview do projeto
+- [📋 **Swagger Guide**](./SWAGGER_DOCS.md) - Como usar e expandir documentação
+
+---
+
+## 🤝 **Contribuição**
+
+Este projeto foi desenvolvido como template universal para microserviços Node.js. 
+
+### Como contribuir:
+1. Fork o projeto
+2. Crie uma branch para sua feature
+3. Commit suas mudanças
+4. Push para a branch
+5. Abra um Pull Request
+
+### Padrões do projeto:
+- **Commits semânticos** (feat, fix, docs, etc.)
+- **TypeScript** obrigatório
+- **Testes** para novas funcionalidades
+- **Documentação** atualizada
+
+---
+
+## 📄 **Licença**
+
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+---
+
+**Desenvolvido com ❤️ pela equipe Carlos Henrique, Vitor Santos, Felipe Gomes e Luiz Felipe**
