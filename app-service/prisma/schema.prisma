@@ -1,0 +1,31 @@
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Adsense {
+  id          Int       @id @default(autoincrement())
+  title       String
+  description String
+  price       String    // Usando String para valores monetários no SQLite
+  userId      Int       @map("user_id") // Foreign Key bruta, sem @relation
+  createdAt   DateTime  @default(now()) @map("created_at")
+  updatedAt   DateTime  @updatedAt @map("updated_at")
+  images      Image[]
+
+  @@index([userId], name: "idx_adsense_user_id")
+}
+
+model Image {
+  id         Int      @id @default(autoincrement())
+  url        String
+  adsenseId  Int      @map("adsense_id")
+  adsense    Adsense  @relation(fields: [adsenseId], references: [id], onDelete: Cascade)
+  createdAt  DateTime @default(now()) @map("created_at")
+
+  @@index([adsenseId], name: "idx_images_adsense_id")
+}

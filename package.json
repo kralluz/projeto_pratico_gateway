@@ -1,0 +1,61 @@
+{
+  "name": "projeto_pratico_gateway",
+  "version": "1.0.0",
+  "description": "Microservices architecture with API Gateway using Fastify",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "install:all": "yarn install:api-gateway && yarn install:auth-service && yarn install:app-service",
+    "install:api-gateway": "cd api-gateway && yarn install",
+    "install:auth-service": "cd auth-service && yarn install",
+    "install:app-service": "cd app-service && yarn install",
+    "start:auth": "cd auth-service && yarn start",
+    "start:app": "cd app-service && yarn start", 
+    "start:gateway": "cd api-gateway && yarn start",
+    "dev:auth": "cd auth-service && yarn dev",
+    "dev:app": "cd app-service && yarn dev",
+    "dev:gateway": "cd api-gateway && yarn dev",
+    "start:all": "concurrently \"yarn start:auth\" \"yarn start:app\" \"yarn start:gateway\"",
+    "dev": "concurrently -n \"AUTH,APP,GATEWAY\" -c \"blue,green,yellow\" \"yarn dev:auth\" \"yarn dev:app\" \"yarn dev:gateway\"",
+    "dev:all": "yarn dev",
+    "test": "yarn test:api-gateway && yarn test:auth-service && yarn test:app-service",
+    "test:api-gateway": "cd api-gateway && yarn test",
+    "test:auth-service": "cd auth-service && yarn test",
+    "test:app-service": "cd app-service && yarn test",
+    "test:watch": "concurrently -n \"API,AUTH,APP\" -c \"blue,green,yellow\" \"cd api-gateway && yarn test:watch\" \"cd auth-service && yarn test:watch\" \"cd app-service && yarn test:watch\"",
+    "test:coverage": "yarn test:coverage:api-gateway && yarn test:coverage:auth-service && yarn test:coverage:app-service",
+    "test:coverage:api-gateway": "cd api-gateway && yarn test:coverage",
+    "test:coverage:auth-service": "cd auth-service && yarn test:coverage",
+    "test:coverage:app-service": "cd app-service && yarn test:coverage",
+    "test:e2e": "yarn test:e2e:api-gateway && yarn test:e2e:auth-service && yarn test:e2e:app-service",
+    "test:e2e:api-gateway": "cd api-gateway && yarn test:e2e",
+    "test:e2e:auth-service": "cd auth-service && yarn test:e2e",
+    "test:e2e:app-service": "cd app-service && yarn test:e2e",
+    "stop": "pkill -f \"nodemon|node\"",
+    "clean": "rm -rf api-gateway/node_modules auth-service/node_modules app-service/node_modules node_modules"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kralluz/projeto_pratico_gateway.git"
+  },
+  "keywords": ["microservices", "api-gateway", "fastify", "nodejs", "jwt", "auth"],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/kralluz/projeto_pratico_gateway/issues"
+  },
+  "homepage": "https://github.com/kralluz/projeto_pratico_gateway#readme",
+  "workspaces": [
+    "api-gateway",
+    "auth-service", 
+    "app-service"
+  ],
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.0.0",
+    "typescript": "^5.0.0",
+    "tsx": "^4.0.0",
+    "@types/node": "^20.0.0"
+  }
+}
