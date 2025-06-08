@@ -12,19 +12,12 @@
 
 ## 👥 **Equipe de Desenvolvimento**
 
-### 🎖️ **Responsáveis Técnicos**
-- **⚙️ Infraestrutura:** Luiz Felipe
-- **👨‍💻 Backend:** Carlos Henrique, Vitor Santos
-- **🎨 Frontend:** Vitor Santos, Felipe Gomes  
-
-
-### 📋 **Criadores do Projeto**
-| Nome | Responsabilidade Principal |
-|------|---------------------------|
-| **Carlos Henrique** | Líder técnico do projeto. |
-| **Luiz Felipe** | DevOps & Infraestrutura |
-| **Vitor Santos** | Full-Stack (Backend/Frontend) |
-| **Felipe Gomes** | Frontend Development |
+| Nome                      | Função Técnica Principal             | Funções Complementares                     | Nível de Atuação               |
+| ------------------------- | ------------------------------------ | ------------------------------------------ | ------------------------------ |
+| **Luiz Felipe**           | ⚙️ DevOps & Infraestrutura           | Deploy · Observabilidade · Segurança       | Estratégico / Operacional      |
+| **Carlos Henrique**       | 🧠 Tech Lead (Arquitetura & Backend) | CI/CD · Documentação · Mentoria · Infra    | Estratégico / Hands-on         |
+| **Vitor Santos**          | 🔄 Full Stack (Backend + Frontend)   | Integração de domínios · Interface Técnica | Operacional / Técnico-Avançado |
+| **Felipe Gomes (Cirilo)** | 🧑‍🎨 Frontend Developer (Trainee)   | QA Visual · Componentização · Aprendizado  | Operacional / treinee          |
 
 
 ---
