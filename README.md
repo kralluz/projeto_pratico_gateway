@@ -20,10 +20,11 @@
 ### 📋 **Criadores do Projeto**
 | Nome | Responsabilidade Principal |
 |------|---------------------------|
+| **Luiz Felipe** | DevOps & Infraestrutura |
 | **Carlos Henrique** | Backend Lead & Arquitetura |
 | **Vitor Santos** | Full-Stack (Backend/Frontend) |
 | **Felipe Gomes** | Frontend Development |
-| **Luiz Felipe** | DevOps & Infraestrutura |
+
 
 ---
 
