@@ -13,9 +13,10 @@
 ## 👥 **Equipe de Desenvolvimento**
 
 ### 🎖️ **Responsáveis Técnicos**
+- **⚙️ Infraestrutura:** Luiz Felipe
 - **👨‍💻 Backend:** Carlos Henrique, Vitor Santos
 - **🎨 Frontend:** Vitor Santos, Felipe Gomes  
-- **⚙️ Infraestrutura:** Luiz Felipe
+
 
 ### 📋 **Criadores do Projeto**
 | Nome | Responsabilidade Principal |
