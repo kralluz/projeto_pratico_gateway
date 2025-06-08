@@ -647,4 +647,4 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 
 ---
 
-**Desenvolvido com ❤️ pela equipe Carlos Henrique, Vitor Santos, Felipe Gomes e Luiz Felipe**
+**Desenvolvido pela equipe Carlos Henrique, Vitor Santos, Felipe Gomes e Luiz Felipe**
